@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lịch Trình Du Lịch TP.HCM ➜ Long An (10/10 - 11/10/2026)</title>
+  <meta name="description" content="Kế hoạch chi tiết chuyến du lịch TP.HCM về Long An ngày 10/10/2026 - 11/10/2026. Lựa chọn linh hoạt 2 chế độ xem, danh mục điểm đến, hồ bơi Biển Đông Tân An, tiệc tại gia và bảng tính ngân sách thông minh." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans (Modern Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for Rich Visuals -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="topHeader">
+    <div class="container header-container">
+      <div class="logo-brand">
+        <span class="logo-icon"><i class="fa-solid fa-compass"></i></span>
+        <div class="logo-text">
+          <span class="logo-title">Long An Journey 2026</span>
+          <span class="logo-sub">HCM ➔ Tân An & Miền Sông Nước</span>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="mainNav">
+        <a href="#modeSection" class="nav-item active"><i class="fa-solid fa-layer-group"></i> Chế Độ Lịch Trình</a>
+        <a href="#timelineSection" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Lộ Trình</a>
+        <a href="#destinationsSection" class="nav-item"><i class="fa-solid fa-map-location-dot"></i> Điểm Du Lịch</a>
+        <a href="#budgetSection" class="nav-item"><i class="fa-solid fa-calculator"></i> Dự Toán Chi Phí</a>
+        <a href="#partySection" class="nav-item"><i class="fa-solid fa-champagne-glasses"></i> Tiệc Tại Gia & Món Ngon</a>
+        <a href="#checklistSection" class="nav-item"><i class="fa-solid fa-clipboard-check"></i> Chuẩn Bị</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="action-btn icon-btn" title="Chuyển chế độ Sáng / Tối" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="quickPrintBtn" class="action-btn primary-btn" title="In hoặc lưu PDF lịch trình">
+          <i class="fa-solid fa-print"></i> In / Xuất Lịch Trình
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-backdrop"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fa-regular fa-calendar-days"></i> 10/10/2026 - 11/10/2026 (2 Ngày 1 Đêm)
+      </div>
+      <h1 class="hero-title">
+        Kế Hoạch Khám Phá <span class="gradient-text">Long An Xanh</span>
+      </h1>
+      <p class="hero-desc">
+        Hành trình trải nghiệm từ TP.HCM về TP. Tân An: Vui chơi sinh thái mùa nước nổi, đắm mình sảng khoái tại 
+        <strong>Hồ bơi Biển Đông (Công viên Tân An)</strong> và thưởng thức bữa tiệc đầm ấm tại gia.
+      </p>
+
+      <!-- Countdown Widget -->
+      <div class="countdown-card" id="countdownCard">
+        <div class="countdown-title">
+          <i class="fa-solid fa-stopwatch"></i> Đếm ngược đến ngày khởi hành 10/10/2026:
+        </div>
+        <div class="countdown-grid">
+          <div class="countdown-box">
+            <span class="count-num" id="countDays">--</span>
+            <span class="count-lbl">Ngày</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-box">
+            <span class="count-num" id="countHours">--</span>
+            <span class="count-lbl">Giờ</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-box">
+            <span class="count-num" id="countMins">--</span>
+            <span class="count-lbl">Phút</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-box">
+            <span class="count-num" id="countSecs">--</span>
+            <span class="count-lbl">Giây</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-layout container">
+    
+    <!-- Mode Selection & Dynamic Switcher Section -->
+    <section id="modeSection" class="section-card mode-selector-area">
+      <div class="section-header text-center">
+        <span class="section-subtitle"><i class="fa-solid fa-sliders"></i> Tùy Chọn Lộ Trình</span>
+        <h2 class="section-title">Chọn Chế Độ Xem Lịch Trình</h2>
+        <p class="section-desc">
+          Lựa chọn phương án khởi hành phù hợp nhất với thời gian và sở thích của nhóm bạn:
+        </p>
+      </div>
+
+      <!-- Mode Selector Switcher Tabs -->
+      <div class="mode-switch-wrapper">
+        <div class="mode-cards-grid">
+          
+          <!-- Mode 1 Card -->
+          <div class="mode-card active" id="modeCard1" onclick="switchMode(1)">
+            <div class="mode-card-header">
+              <span class="mode-pill"><i class="fa-solid fa-sun"></i> CHẾ ĐỘ 1</span>
+              <span class="mode-tag badge-green">Trọn vẹn 2 ngày</span>
+            </div>
+            <h3 class="mode-card-title">Khởi hành SÁNG 10/10/2026</h3>
+            <p class="mode-card-summary">
+              Xuất phát sớm từ Sài Gòn ➔ Trưa ghé 1 điểm du lịch (Happyland / Tân Lập / Safari) ➔ Chiều tắm mát Hồ bơi Biển Đông Tân An ➔ Tối mở tiệc tại gia ➔ Sáng 11/10 ghé điểm du lịch 2 ➔ Chiều về lại TP.HCM.
+            </p>
+            <div class="mode-features">
+              <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Tối đa hóa thời gian vui chơi 2 điểm du lịch</div>
+              <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Trải nghiệm ăn trưa dã ngoại miệt vườn ngày đầu</div>
+              <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Chiều bơi lội thư giãn trọn vẹn tại Hồ bơi Biển Đông</div>
+            </div>
+            <button class="btn-select-mode">
+              <span class="radio-indicator"></span> Đang chọn Chế độ 1
+            </button>
+          </div>
+
+          <!-- Mode 2 Card -->
+          <div class="mode-card" id="modeCard2" onclick="switchMode(2)">
+            <div class="mode-card-header">
+              <span class="mode-pill"><i class="fa-solid fa-cloud-sun"></i> CHẾ ĐỘ 2</span>
+              <span class="mode-tag badge-blue">Thư thả & Tối ưu</span>
+            </div>
+            <h3 class="mode-card-title">Khởi hành TRƯA 10/10/2026</h3>
+            <p class="mode-card-summary">
+              Thong thả xuất phát sau bữa trưa tại Sài Gòn ➔ Về thẳng Tân An ➔ Chiều tắm mát tại Hồ bơi Biển Đông Công viên Tân An ➔ Tối mở tiệc tại gia vui vẻ ➔ Sáng 11/10 tham quan 1 điểm du lịch ➔ Chiều về TP.HCM.
+            </p>
+            <div class="mode-features">
+              <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Không cần thức dậy quá sớm sáng Thứ 7</div>
+              <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Tập trung trọn vẹn buổi chiều tại Hồ bơi Biển Đông</div>
+              <div class="feature-item"><i class="fa-solid fa-check-circle"></i> Tiết kiệm năng lượng cho bữa tiệc tối sum vầy</div>
+            </div>
+            <button class="btn-select-mode">
+              <span class="radio-indicator"></span> Chọn Chế độ 2
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dynamic Customizer Bar: Choose which destination to slot in -->
+      <div class="customizer-box" id="customizerBox">
+        <div class="customizer-header">
+          <div>
+            <h4><i class="fa-solid fa-wand-magic-sparkles"></i> Tùy Chỉnh Điểm Đến Cho Lịch Trình</h4>
+            <p>Chọn địa điểm bạn muốn ghé thăm để hệ thống tự động cập nhật lộ trình, giờ giấc & tổng ngân sách:</p>
+          </div>
+          <button class="btn-reset-slots" onclick="resetDefaultDestinations()" title="Khôi phục mặc định">
+            <i class="fa-solid fa-rotate-left"></i> Đặt lại
+          </button>
+        </div>
+
+        <div class="slots-grid">
+          <!-- Slot 1: Trưa ngày 10/10 (Only active in Mode 1) -->
+          <div class="slot-card" id="slotNoonDay1Container">
+            <div class="slot-badge"><i class="fa-solid fa-sun"></i> Điểm trưa 10/10 (Ngày 1)</div>
+            <label for="selectNoonDay1" class="slot-label">Địa điểm ghé thăm & ăn trưa:</label>
+            <select id="selectNoonDay1" class="custom-select" onchange="onDestinationChange()">
+              <!-- Options populated by JS -->
+            </select>
+            <div class="slot-info" id="slotNoonDay1Info">
+              <!-- Info populated by JS -->
+            </div>
+          </div>
+
+          <!-- Slot 2: Chiều ngày 10/10 (Fixed: Hồ bơi Biển Đông) -->
+          <div class="slot-card locked-slot">
+            <div class="slot-badge badge-cyan"><i class="fa-solid fa-water"></i> Chiều 10/10 (Cố định)</div>
+            <div class="slot-locked-title">
+              <strong>Hồ bơi Biển Đông (Công viên Tân An)</strong>
+            </div>
+            <p class="slot-locked-desc">
+              Tắm mát, bơi lội và thư giãn tại hồ bơi trung tâm TP. Tân An (Cách trung tâm 0 km | ~30.000đ - 50.000đ/vé).
+            </p>
+          </div>
+
+          <!-- Slot 3: Tối ngày 10/10 (Fixed: Tiệc tại gia) -->
+          <div class="slot-card locked-slot">
+            <div class="slot-badge badge-amber"><i class="fa-solid fa-utensils"></i> Tối 10/10 (Cố định)</div>
+            <div class="slot-locked-title">
+              <strong>Ăn Uống Vui Chơi Tại Gia (Món Chế Biến Sẵn Mua Về)</strong>
+            </div>
+            <p class="slot-locked-desc">
+              Thưởng thức các món ngon chế biến sẵn mua về (vịt quay, cá lóc nướng cuốn bánh tráng, lẩu mua sẵn, gỏi...), tiện lợi không cần nấu nướng.
+            </p>
+          </div>
+
+          <!-- Slot 4: Sáng ngày 11/10 (Active in both Mode 1 & Mode 2) -->
+          <div class="slot-card" id="slotMorningDay2Container">
+            <div class="slot-badge"><i class="fa-solid fa-sun-plant-wilt"></i> Điểm sáng 11/10 (Ngày 2)</div>
+            <label for="selectMorningDay2" class="slot-label">Địa điểm tham quan buổi sáng:</label>
+            <select id="selectMorningDay2" class="custom-select" onchange="onDestinationChange()">
+              <!-- Options populated by JS -->
+            </select>
+            <div class="slot-info" id="slotMorningDay2Info">
+              <!-- Info populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Detailed Timeline Section -->
+    <section id="timelineSection" class="section-card">
+      <div class="section-header">
+        <div class="flex-between">
+          <div>
+            <span class="section-subtitle"><i class="fa-solid fa-clock-rotate-left"></i> Lộ Trình Từng Giờ</span>
+            <h2 class="section-title" id="timelineTitle">Chi Tiết Lịch Trình (Chế Độ 1)</h2>
+          </div>
+          <div class="timeline-quick-actions">
+            <button class="btn-outline" onclick="copyScheduleText()">
+              <i class="fa-regular fa-copy"></i> Sao chép gửi Zalo
+            </button>
+          </div>
+        </div>
+        <p class="section-desc" id="timelineDesc">
+          Lịch trình được tối ưu hóa theo thời gian di chuyển thực tế từ TP.HCM và khoảng cách từ TP. Tân An:
+        </p>
+      </div>
+
+      <!-- Timeline Tabs for Day 1 and Day 2 -->
+      <div class="timeline-day-tabs">
+        <button class="day-tab-btn active" id="btnDay1" onclick="showTimelineDay(1)">
+          <i class="fa-solid fa-calendar-day"></i> Ngày 1: Thứ Bảy (10/10/2026)
+        </button>
+        <button class="day-tab-btn" id="btnDay2" onclick="showTimelineDay(2)">
+          <i class="fa-solid fa-calendar-check"></i> Ngày 2: Chủ Nhật (11/10/2026)
+        </button>
+      </div>
+
+      <!-- Timeline Content Container -->
+      <div class="timeline-wrapper">
+        <div class="timeline-stream" id="timelineStream">
+          <!-- Dynamic Timeline Items rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Long An Destinations Catalog with Distance & Cost -->
+    <section id="destinationsSection" class="section-card">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-tree"></i> Cẩm Nang Điểm Đến</span>
+        <h2 class="section-title">Danh Mục Địa Điểm Du Lịch Long An</h2>
+        <p class="section-desc">
+          Bảng tổng hợp chi tiết tất cả các điểm tham quan nổi bật tại Long An kèm khoảng cách thực tế so với 
+          <strong>Trung tâm TP. Tân An</strong>, thời gian di chuyển và mức chi phí ước tính:
+        </p>
+      </div>
+
+      <!-- Filters & Sorters -->
+      <div class="dest-filter-bar">
+        <div class="filter-group">
+          <label><i class="fa-solid fa-filter"></i> Phân loại:</label>
+          <div class="chip-filter" id="typeFilter">
+            <button class="chip active" data-type="all" onclick="filterDestinations('all', this)">Tất cả</button>
+            <button class="chip" data-type="sinh-thai" onclick="filterDestinations('sinh-thai', this)">Sinh Thái / Rừng Tràm</button>
+            <button class="chip" data-type="vui-choi" onclick="filterDestinations('vui-choi', this)">Vui Chơi / Công Viên</button>
+            <button class="chip" data-type="vuon-trai-cay" onclick="filterDestinations('vuon-trai-cay', this)">Vườn Cây / Ẩm Thực</button>
+            <button class="chip" data-type="van-hoa" onclick="filterDestinations('van-hoa', this)">Di Tích / Văn Hóa</button>
+          </div>
+        </div>
+
+        <div class="sort-group">
+          <label for="destSort"><i class="fa-solid fa-arrow-down-short-wide"></i> Sắp xếp theo:</label>
+          <select id="destSort" class="custom-select sort-select" onchange="sortDestinations(this.value)">
+            <option value="dist-asc">Khoảng cách gần Tân An nhất</option>
+            <option value="dist-desc">Khoảng cách xa Tân An nhất</option>
+            <option value="price-asc">Chi phí từ thấp đến cao</option>
+            <option value="price-desc">Chi phí từ cao đến thấp</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Destination Cards Grid -->
+      <div class="destinations-grid" id="destinationsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Smart Budget Calculator Section -->
+    <section id="budgetSection" class="section-card">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-coins"></i> Tài Chính Chuyến Đi</span>
+        <h2 class="section-title">Bảng Dự Toán Chi Phí Thông Minh</h2>
+        <p class="section-desc">
+          Tùy chỉnh số lượng thành viên, phương tiện di chuyển và mức chi tiêu tiệc tại gia để dự toán chính xác:
+        </p>
+      </div>
+
+      <div class="budget-calculator-layout">
+        <!-- Control Panel -->
+        <div class="budget-controls">
+          
+          <!-- Members Counter -->
+          <div class="budget-control-item">
+            <label class="control-label"><i class="fa-solid fa-users"></i> Số lượng thành viên:</label>
+            <div class="counter-input">
+              <button class="btn-counter" onclick="changeMemberCount(-1)"><i class="fa-solid fa-minus"></i></button>
+              <span id="memberCountDisplay" class="counter-value">4</span>
+              <button class="btn-counter" onclick="changeMemberCount(1)"><i class="fa-solid fa-plus"></i></button>
+              <span class="counter-unit">người</span>
+            </div>
+          </div>
+
+          <!-- Vehicle Choice -->
+          <div class="budget-control-item">
+            <label class="control-label"><i class="fa-solid fa-motorcycle"></i> Phương tiện di chuyển:</label>
+            <div class="vehicle-options">
+              <label class="vehicle-radio">
+                <input type="radio" name="vehicleChoice" value="motorbike" checked onchange="updateBudgetCalculation()">
+                <div class="vehicle-card">
+                  <i class="fa-solid fa-motorcycle"></i>
+                  <span>Xe Máy (Chính)</span>
+                  <small>~120k xăng/xe khứ hồi</small>
+                </div>
+              </label>
+
+              <label class="vehicle-radio">
+                <input type="radio" name="vehicleChoice" value="car" onchange="updateBudgetCalculation()">
+                <div class="vehicle-card">
+                  <i class="fa-solid fa-car"></i>
+                  <span>Ô Tô Riêng</span>
+                  <small>Xăng + Phí cao tốc</small>
+                </div>
+              </label>
+
+              <label class="vehicle-radio">
+                <input type="radio" name="vehicleChoice" value="rental" onchange="updateBudgetCalculation()">
+                <div class="vehicle-card">
+                  <i class="fa-solid fa-van-shuttle"></i>
+                  <span>Thuê Xe 7-16 Chỗ</span>
+                  <small>Trọn gói 2 ngày</small>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Home Party Budget Tier -->
+          <div class="budget-control-item">
+            <div class="flex-between">
+              <label class="control-label"><i class="fa-solid fa-utensils"></i> Tiêu chuẩn Món ăn mua sẵn về nhà (Tối 10/10):</label>
+              <span id="partyTierLabel" class="tier-badge">Ấm cúng & Đầy đủ (200.000đ/người)</span>
+            </div>
+            <input type="range" id="partyBudgetSlider" min="150000" max="400000" step="25000" value="200000" class="budget-slider" oninput="updateBudgetSlider(this.value)">
+            <div class="slider-ticks">
+              <span>150k (Món mua sẵn cơ bản)</span>
+              <span>250k (Thịnh soạn: Vịt quay, lẩu sẵn, gỏi)</span>
+              <span>400k (Cao cấp: Hải sản mua sẵn)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cost Breakdown & Summary -->
+        <div class="budget-summary-panel">
+          <div class="budget-summary-header">
+            <h3>Dự Toán Chi Tiết</h3>
+            <span class="mode-indicator-tag" id="budgetModeIndicator">Chế độ 1</span>
+          </div>
+
+          <div class="budget-items-list" id="budgetItemsList">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div class="budget-grand-total">
+            <div class="total-row">
+              <span>Tổng Chi Phí Đoàn:</span>
+              <strong class="grand-price" id="grandTotalPrice">0 VNĐ</strong>
+            </div>
+            <div class="per-person-row">
+              <span>Bình quân mỗi người:</span>
+              <strong class="per-person-price" id="perPersonPrice">0 VNĐ / người</strong>
+            </div>
+          </div>
+          
+          <div class="budget-note">
+            <i class="fa-solid fa-circle-info"></i> Chi phí thực tế có thể thay đổi nhẹ tùy vào mức độ mua sắm quà cáp và số lượng món ăn mua về.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home Party & Long An Gastronomy Section -->
+    <section id="partySection" class="section-card">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-utensils"></i> Ẩm Thực Miền Tây</span>
+        <h2 class="section-title">Gợi Ý Món Ngon Chế Biến Sẵn Mua Về Nhà & Đặc Sản</h2>
+        <p class="section-desc">
+          Bữa tối ngày 10/10/2026 sau khi bơi hồ Biển Đông chỉ cần mua các món ăn chế biến sẵn nóng hổi về bày bàn tiệc, tiện lợi và không cần nấu nướng vất vả:
+        </p>
+      </div>
+
+      <div class="food-grid">
+        <!-- Party Menu Card -->
+        <div class="food-card">
+          <div class="food-card-header">
+            <span class="food-badge"><i class="fa-solid fa-bag-shopping"></i> MÓN NGON CHẾ BIẾN SẴN MUA VỀ (Tối 10/10)</span>
+            <h3>Bàn Tiệc Mua Sẵn Nóng Hổi & Tiện Lợi</h3>
+          </div>
+          <div class="food-list">
+            <div class="food-item">
+              <span class="food-bullet"><i class="fa-solid fa-drumstick-bite"></i></span>
+              <div>
+                <strong>Vịt quay sốt tiêu / Gà nướng lu mua sẵn nóng hổi:</strong>
+                <p>Da giòn rụm, thịt thơm mềm mua từ các tiệm quay nổi tiếng tại TP. Tân An.</p>
+              </div>
+            </div>
+            <div class="food-item">
+              <span class="food-bullet"><i class="fa-solid fa-bowl-food"></i></span>
+              <div>
+                <strong>Cá lóc nướng trui / Nem nướng cuốn bánh tráng làm sẵn:</strong>
+                <p>Quán đóng gói trọn bộ sẵn kèm bánh tráng, rau sống tươi rói và nước chấm mắm me.</p>
+              </div>
+            </div>
+            <div class="food-item">
+              <span class="food-bullet"><i class="fa-solid fa-champagne-glasses"></i></span>
+              <div>
+                <strong>Set Lẩu chế biến sẵn (Lẩu mắm / Lẩu bò / Lẩu gà lá giang):</strong>
+                <p>Đầy đủ nước dùng đậm đà, thịt, bún và rau nhúng; về nhà chỉ cần bật bếp đun sôi là thưởng thức.</p>
+              </div>
+            </div>
+            <div class="food-item">
+              <span class="food-bullet"><i class="fa-solid fa-shrimp"></i></span>
+              <div>
+                <strong>Gỏi ngó sen tôm thịt / Tôm ốc hấp sả mua sẵn:</strong>
+                <p>Món khai vị thanh mát, tiện lợi nhắm cùng bia và nước giải khát.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Souvenirs & Specialties Card -->
+        <div class="food-card">
+          <div class="food-card-header">
+            <span class="food-badge badge-gold"><i class="fa-solid fa-gift"></i> ĐẶC SẢN MUA LÀM QUÀ</span>
+            <h3>Quà Tặng Đậm Chất Long An</h3>
+          </div>
+          <div class="food-list">
+            <div class="food-item">
+              <span class="food-bullet"><i class="fa-solid fa-wine-bottle"></i></span>
+              <div>
+                <strong>Rượu Đế Gò Đen (Bến Lức):</strong>
+                <p>Rượu nếp truyền thống danh bất hư truyền, đậm vị men lá thơm lừng.</p>
+              </div>
+            </div>
+            <div class="food-item">
+              <span class="food-bullet"><i class="fa-solid fa-apple-whole"></i></span>
+              <div>
+                <strong>Thanh long ruột đỏ Châu Thành:</strong>
+                <p>Trái to mọng nước, vị ngọt thanh mát, giá mua tại vườn cực kỳ tốt.</p>
+              </div>
+            </div>
+            <div class="food-item">
+              <span class="food-bullet"><i class="fa-solid fa-wheat-awn"></i></span>
+              <div>
+                <strong>Gạo Nàng Thơm Chợ Đào & Bánh tét Long An:</strong>
+                <p>Hạt gạo dẻo thơm nức tiếng, bánh tét nhân chuối / thịt trứng béo ngậy.</p>
+              </div>
+            </div>
+            <div class="food-item">
+              <span class="food-bullet"><i class="fa-solid fa-cookie"></i></span>
+              <div>
+                <strong>Đậu phộng Đức Hòa & Lạp xưởng tươi Cần Đước:</strong>
+                <p>Vị đậm đà giòn sần sật, nhắm bia hoặc ăn cơm đều ngon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packing Checklist & Travel Tips -->
+    <section id="checklistSection" class="section-card">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-list-check"></i> Cẩm Nang Hành Trang</span>
+        <h2 class="section-title">Hành Trang Chuẩn Bị & Mẹo Chuyến Đi</h2>
+        <p class="section-desc">
+          Tích chọn các vật dụng bạn đã chuẩn bị để sẵn sàng khởi hành vào ngày 10/10/2026:
+        </p>
+      </div>
+
+      <div class="checklist-grid">
+        <!-- Checklist Group 1: Bơi lội & Trang phục -->
+        <div class="check-box-group">
+          <h4><i class="fa-solid fa-person-swimming"></i> Trang Phục & Đi Bơi Hồ Biển Đông</h4>
+          <label class="check-item"><input type="checkbox" checked> <span>Đồ bơi (quần bơi, áo bơi, kính bơi, nón bơi)</span></label>
+          <label class="check-item"><input type="checkbox" checked> <span>Khăn tắm lớn & túi đựng đồ ướt chống thấm</span></label>
+          <label class="check-item"><input type="checkbox"> <span>1-2 bộ quần áo thoáng mát chụp ảnh dã ngoại</span></label>
+          <label class="check-item"><input type="checkbox"> <span>Dép lê hoặc sandal đi nước chống trơn</span></label>
+        </div>
+
+        <!-- Checklist Group 2: Dã ngoại & Đồ tiệc tại gia -->
+        <div class="check-box-group">
+          <h4><i class="fa-solid fa-utensils"></i> Bàn Tiệc Tại Gia & Giải Trí</h4>
+          <label class="check-item"><input type="checkbox" checked> <span>Bếp gas mini hoặc nồi lẩu điện (để đun nóng set lẩu mua sẵn)</span></label>
+          <label class="check-item"><input type="checkbox" checked> <span>Chén, đũa, ly (hoặc bộ đồ dùng một lần) & khăn giấy</span></label>
+          <label class="check-item"><input type="checkbox" checked> <span>Loa kéo Bluetooth mini để đàn hát, giao lưu âm nhạc</span></label>
+          <label class="check-item"><input type="checkbox"> <span>Đồ uống, nước giải khát, bia & đá lạnh</span></label>
+        </div>
+
+        <!-- Checklist Group 3: Y tế & Giấy tờ -->
+        <div class="check-box-group">
+          <h4><i class="fa-solid fa-motorcycle"></i> Giấy Tờ Xe Máy & Y Tế</h4>
+          <label class="check-item"><input type="checkbox" checked> <span>Bằng lái xe, CCCD & bảo hiểm xe máy bắt buộc</span></label>
+          <label class="check-item"><input type="checkbox" checked> <span>Áo khoác chống nắng, kính râm & mũ bảo hiểm đạt chuẩn</span></label>
+          <label class="check-item"><input type="checkbox" checked> <span>Kem chống nắng, xịt chống muỗi & thuốc y tế cá nhân</span></label>
+          <label class="check-item"><input type="checkbox" checked> <span>Sạc dự phòng điện thoại & túi chống nước</span></label>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Quick Nav / Share Modal -->
+  <div class="share-toast" id="shareToast">
+    <i class="fa-solid fa-circle-check"></i> Đã sao chép lịch trình vào bộ nhớ tạm! Bạn có thể dán vào Zalo/Messenger để gửi cho nhóm.
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo-text">
+          <span class="logo-title">Long An Journey 2026</span>
+          <p>Kế hoạch du lịch hoàn hảo TP.HCM ➔ Long An | 10/10/2026 - 11/10/2026</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#modeSection">Chế Độ 1 & 2</a>
+        <a href="#timelineSection">Lộ Trình</a>
+        <a href="#destinationsSection">Điểm Du Lịch</a>
+        <a href="#budgetSection">Dự Toán Chi Phí</a>
+        <a href="#partySection">Tiệc Tại Gia</a>
+      </div>
+      <div class="footer-copy">
+        Chúc bạn và người thân có một chuyến đi an toàn, vui vẻ và ngập tràn kỷ niệm đẹp tại Long An! 🌿🎉
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
